@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+a {
+    font-family: inherit;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+a:focus {
+    color: rgb(62, 62, 136);
+    transform: scale(1.1);
+    
+}
+
+li {
+    list-style-type: none;
+}
+
+hr {
+    width: 10%;
+   border-top: dotted 10px #000;
+   border-bottom: none;
+   border-left: none;
+   border-right: none;
+
+    margin: auto;
+   
+    
+
+}
+
+.logo {
+    background: url('/Style/wws_logo_black-01.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-width: 10rem;
+    min-height: 5rem;
+    
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 3rem;
+}
+
+.main-navigation ul {
+    margin-left: 10px;
+    padding: 5px
+}
+
+.main-navigation a:hover {
+    color: rgb(212, 212, 218);
+    transform: scale(1.5);
+    transition: ease-in 0.2s;
+    
+}
+
+.hero {
+    background: url('/Style/Main_opacity55.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    position: relative;
+    min-width: 100vw;
+    height: 100vh;
+
+}
+
+
+.title-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 5rem;
+    
+    
+}
+
+.title-overlay h1 {
+    
+    font-size: 3rem;
+    font-family: 'Amatic SC', cursive;
+}
+
+.title-overlay img {
+   max-height: 50vh;
+   width: 30vw;
+    
+    margin: 0;
+    padding: 0;
+
+}
+
+.about-main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5rem;
+    padding: 3rem;
+}
+
+.about-para {
+    line-height: 1.5;
+    font-size: 1.5rem;
+    min-width: 50vw;
+    padding: 2rem;
+
+}
+
+.about-para p {
+    font-size: 1.2rem;
+    
+}
+
+.about-para h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.profile-pic {
+    min-width: 30vw;
+    margin-left: 50px;
+
+}
+
+/* **** GALLERY SECTION **** */
+
+.gallery-title, .shop-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+    font-size: 2.5rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+.gallery-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    margin: 4rem auto;
+}
+
+.panel {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color: white;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    transition: flex 0.7s ease-in;
+}
+
+
+.panel h3 {
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    margin: 0 0 0 .5rem;
+    opacity: 0;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.panel a {
+    color: #fff;
+}
+
+.panel a:hover {
+    
+    transition: ease-in 0.1s;
+    color: teal;
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panel.active > h3   {
+    
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width: 480px) {
+    .gallery-main {
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(4), .panel:nth-of-type(5){
+        display: none;
+    }
+}
+
+
+/* *** SHOP SECTION CARDS *** */
+
+.shop-main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 50px auto;
+    padding: 3rem;
+    background: rgb(207, 207, 207);
+    
+
+}
+
+.card-wrapper {
+    position: relative;
+    min-width: 19rem;
+    height: 35rem;
+    
+    
+}
+
+.wine {
+    background: url('/Style/Wine Stoppers/wine1.jpg');
+}
+
+.pens {
+    background: url('/Style/Pens/pen5.jpg');
+}
+
+.home-decor {
+    background: url('/Style/Misc Work/board1.jpg');
+}
+
+.wine, .pens, .home-decor {
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    border: none;
+    
+}
+
+
+
+.card-title > a {
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    font-size: 1.5rem;
+    color: #fff;
+    transition: 0.2s;
+    
+}
+
+.card-title a:hover {
+    color: turquoise;
+    transform: translateY(-20%);
+    transition: ease-in 0.2s;
+}
